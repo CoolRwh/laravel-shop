@@ -46,7 +46,10 @@
                                             <img src="{{ $product->image }}"/>
                                         </div>
                                         <div class="price"><b>￥</b>{{ $product->price }}</div>
-                                        <div class="title">{{ $product->title }}</div>
+                                        <div class="title">
+                                            <a href="{{ route('products.show', ['product' => $product->id]) }}">{{ $product->title }}</a>
+                                        </div>
+
                                         <div class="mdui-card-actions mdui-card-actions-stacked">
                                             <div class="sold_count">销量 <span>{{ $product->sold_count }}笔</span></div>
                                             <div class="review_count">评价 <span>{{ $product->review_count }}</span></div>
