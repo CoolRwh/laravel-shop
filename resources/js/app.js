@@ -5,6 +5,9 @@
  */
 
 require('./bootstrap');
+require('./components/SelectDistrict');
+require('./components/UserAddressesCreateAndEdit');
+
 
 window.Vue = require('vue');
 
