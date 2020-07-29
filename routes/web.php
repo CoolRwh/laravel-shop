@@ -17,3 +17,7 @@
 
 //首页
 Route::get('/','PAgesController@root')->name('root');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
