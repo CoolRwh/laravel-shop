@@ -22,7 +22,7 @@ Route::get('/','PAgesController@root')->name('root')->middleware('verified');
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('products', 'ProductsController@index')->name('products.index');
 
 
 

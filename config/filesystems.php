@@ -56,11 +56,10 @@ return [
         ],
         'admin' => [
             'driver' => 'local',
-            'root' => public_path('uploads'),
+            'root' => public_path('upload'),
             'visibility' => 'public',
-            'url' => env('APP_URL').'/uploads',
+            'url' => env('APP_URL').'/public/upload/',
         ],
-
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
