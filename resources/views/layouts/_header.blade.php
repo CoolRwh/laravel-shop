@@ -19,8 +19,11 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
+                            <a href="{{ route('products.index') }}" class="dropdown-item">商品列表</a>
 
                             <a href="{{ route('user_addresses.index') }}" class="dropdown-item">收货地址</a>
+
+                            <a href="{{ route('products.favorites') }}" class="dropdown-item">我的收藏</a>
 
                             {{--                        退出--}}
                             <a class="dropdown-item" id="logout" href="#"
