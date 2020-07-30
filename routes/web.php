@@ -47,6 +47,8 @@ Route::group(
         Route::get('cart', 'CartController@index')->name('cart.index');
         //从购物车中移除
         Route::delete('cart/{sku}', 'CartController@remove')->name('cart.remove');
+        //创建订单
+        Route::post('orders', 'OrdersController@store')->name('orders.store');
     }
 );
 //商品详情
