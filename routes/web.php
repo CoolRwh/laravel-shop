@@ -43,6 +43,10 @@ Route::group(
         Route::get('products/favorites', 'ProductsController@favorites')->name('products.favorites');
         //添加到购物车
         Route::post('cart', 'CartController@add')->name('cart.add');
+        //查看购车
+        Route::get('cart', 'CartController@index')->name('cart.index');
+        //从购物车中移除
+        Route::delete('cart/{sku}', 'CartController@remove')->name('cart.remove');
     }
 );
 //商品详情
