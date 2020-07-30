@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-10 offset-lg-1">
             <div class="card">
-                <div class="card-header">我的收藏</div>
+                <div class="card-header">{{ Auth::user()->name }} --- 的收藏 / 一共：{{ $products->count() }} 件</div>
                 <div class="card-body">
                     <div class="row products-list">
                         @foreach($products as $product)

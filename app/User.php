@@ -4,6 +4,7 @@ namespace App;
 
 use App\Models\UserAddress;
 use App\Models\Product;
+Use App\Models\CartItem;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -53,5 +54,14 @@ class User extends Authenticatable
         return $this->belongsToMany(Product::class, 'user_favorite_products')
             ->withTimestamps()
             ->orderBy('user_favorite_products.created_at', 'desc');
+    }
+
+    /**
+     * 购物车
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function cartItems()
+    {
+        return $this->hasMany(CartItem::class);
     }
 }
